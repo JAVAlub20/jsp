@@ -7,6 +7,7 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" %>
 <jsp:useBean id="calulator" class="pl.sda.Calculator" />
+<jsp:setProperty name="calulator" property="n" value="5" />
 <html>
 <head>
     <title>Podnoszenie do potęgi</title>
@@ -14,7 +15,7 @@
 <body>
     5 <sup>2</sup> wynosi:
 <%
-    int square = calulator.square(5);
+    int square = calulator.square();
     out.print(square);
 %>.
 </body>
