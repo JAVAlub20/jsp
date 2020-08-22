@@ -26,5 +26,7 @@
     <input type="submit" value="Wyślij"/>
 </form>
 
+<a href="http://localhost:8080/search.jsp?query=JAVAzLinku&page=56&sort=asc"> link </a>
+
 </body>
 </html>
