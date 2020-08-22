@@ -10,23 +10,17 @@
 <jsp:setProperty name="calulator" property="n" value="5"/>
 <html>
 <head>
-    <title>Search</title>
+    <title>Obsługa ciasteczek</title>
 </head>
 <body>
 
-<form action="search.jsp" method="post">
-    <label>Szukane słowo <input type="text" name="query"></label><br/>
-    <label>Strona nr <input type="text" name="page"></label><br/>
-    <label>Sortowanie
-        <select name="sort">
-            <option value="asc">rosnąco</option>
-            <option value="desc">malejąco</option>
-        </select>
-    </label><br/>
-    <input type="submit" value="Wyślij"/>
-</form>
+<h2>Obsługa Cookie</h2>
+<%
+    Cookie cookie = new Cookie("searchId", String.valueOf(123456));
+    cookie.setMaxAge(60 * 60 *24);
+    response.addCookie(cookie);
+%>
 
-<a href="http://localhost:8080/search.jsp?query=JAVAzLinku&page=56&sort=asc"> link </a>
 
 </body>
 </html>
