@@ -13,7 +13,8 @@
     <title>Podnoszenie do potęgi</title>
 </head>
 <body>
-    5 <sup>2</sup> wynosi:
+    <jsp:getProperty name="calulator" property="n"/>
+    <sup>2</sup> wynosi:
 <%
     int square = calulator.square();
     out.print(square);
