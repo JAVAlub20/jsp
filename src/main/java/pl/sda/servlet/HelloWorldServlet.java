@@ -1,5 +1,7 @@
 package pl.sda.servlet;
 
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
 import javax.servlet.annotation.WebInitParam;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -20,9 +22,13 @@ public class HelloWorldServlet extends HttpServlet {
 
     @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response)
-            throws IOException {
+            throws IOException, ServletException {
         PrintWriter writer = response.getWriter();
         writer.println("newParam: " + getInitParameter("newParam"));
         writer.println("Localization: " + getInitParameter("localization"));
+
+
+                response.sendRedirect("empty.jsp");
+
     }
 }
