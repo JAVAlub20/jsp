@@ -8,14 +8,14 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-@WebServlet(name = "HelloWorldServlet",
-        urlPatterns = {"/", "/hello"},
-        initParams = {
-                @WebInitParam(name = "localization", value = "Poland"),
-                @WebInitParam(name = "newParam", value = "newValue")
-        },
-        loadOnStartup = 1
-)
+//@WebServlet(name = "HelloWorldServlet",
+//        urlPatterns = {"/", "/hello"},
+//        initParams = {
+//                @WebInitParam(name = "localization", value = "Poland"),
+//                @WebInitParam(name = "newParam", value = "newValue")
+//        },
+//        loadOnStartup = 1
+//)
 public class HelloWorldServlet extends HttpServlet {
 
     @Override
