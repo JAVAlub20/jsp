@@ -28,7 +28,8 @@ public class HelloWorldServlet extends HttpServlet {
         writer.println("Localization: " + getInitParameter("localization"));
 
 
-                response.sendRedirect("empty.jsp");
+        RequestDispatcher dispatcher = request.getRequestDispatcher("empty.jsp");
+        dispatcher.forward(request, response);
 
     }
 }
