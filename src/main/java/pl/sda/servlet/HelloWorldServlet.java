@@ -29,7 +29,7 @@ public class HelloWorldServlet extends HttpServlet {
 
 
         RequestDispatcher dispatcher = request.getRequestDispatcher("empty.jsp");
-        dispatcher.forward(request, response);
+        dispatcher.include(request, response);
 
     }
 }
